@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('device_name');
+            $table->string('device_name')->nullable();
             $table->integer('code')->nullable();
             // $table->timestamps('code_expierd_at');
             $table->timestamp('code_expired_at');
